@@ -4,7 +4,7 @@ namespace StringGenerator
 {
     public class View
     {
-        public int ParseSeed(string[] args)
+        public static int ParseSeed(string[] args)
         {
             if (args.Length == 0)
             {
@@ -19,12 +19,12 @@ namespace StringGenerator
             return seed;
         }
 
-        public void DisplayResult(string result)
+        public static void DisplayResult(string result)
         {
             Console.WriteLine(result);
         }
 
-        public void DisplayError(string message)
+        public static void DisplayError(string message)
         {
             Console.Error.WriteLine(message);
         }

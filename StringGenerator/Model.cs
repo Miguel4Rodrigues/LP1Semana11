@@ -19,8 +19,8 @@ namespace StringGenerator
 
         public void Generate()
         {
-            Random rng = new Random(Seed);
-            StringBuilder builder = new StringBuilder(Length);
+            Random rng = new(Seed);
+            StringBuilder builder = new(Length);
 
             for (int i = 0; i < Length; i++)
             {

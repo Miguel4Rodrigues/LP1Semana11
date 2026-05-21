@@ -4,20 +4,20 @@ namespace StringGenerator
 {
     public class Controller
     {
-        private readonly View _view = new View();
+        private readonly View _view = new();
 
-        public void Run(string[] args)
+        public static void Run(string[] args)
         {
             try
             {
-                int seed = _view.ParseSeed(args);
-                Model model = new Model(seed);
+                int seed = View.ParseSeed(args);
+                Model model = new(seed);
                 model.Generate();
-                _view.DisplayResult(model.Output);
+                View.DisplayResult(model.Output);
             }
             catch (Exception ex)
             {
-                _view.DisplayError(ex.Message);
+                View.DisplayError(ex.Message);
                 Environment.Exit(1);
             }
         }

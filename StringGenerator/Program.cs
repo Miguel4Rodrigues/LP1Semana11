@@ -5,7 +5,7 @@
         static void Main(string[] args)
         {
             Controller controller = new();
-            controller.Run(args);
+            Controller.Run(args);
         }
     }
 }
