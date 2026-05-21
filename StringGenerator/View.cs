@@ -11,7 +11,12 @@ namespace StringGenerator
                 throw new ArgumentException("No seed provided");
             }
 
-            return int.Parse(args[0]);
+            if (!int.TryParse(args[0], out int seed))
+            {
+                throw new ArgumentException("Nope");
+            }
+
+            return seed;
         }
 
         public void DisplayResult(string result)
